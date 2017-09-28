@@ -1,5 +1,5 @@
 module.exports = {
-  run: function () {
-    console.log("Hello world")
+  run: function (message) {
+    console.log(message)
   }
 }

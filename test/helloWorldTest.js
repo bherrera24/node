@@ -6,12 +6,12 @@ var expect = chai.expect
 chai.use(sinonChai)
 
 describe('helloWorld', function () {
-  it('displays "Hello world"', function () {
+  it('displays a string', function () {
     var consoleFake =  sinon.stub(console, 'log')
-    helloWorld.run()
+    helloWorld.run('Hello Santiago')
     consoleFake.restore()
 
     expect(consoleFake).to.have.been.calledOnce
-    expect(consoleFake).to.have.been.calledWith('Hello world')
+    expect(consoleFake).to.have.been.calledWith('Hello Santiago')
   })
 })
